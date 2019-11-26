@@ -1,4 +1,4 @@
-const path = require(`path`);
+const path = require('path');
 const webpackNodeExternals = require('webpack-node-externals');
 
 module.exports = {
@@ -12,9 +12,9 @@ module.exports = {
     module: {
         rules: [
             {
-                test:/\.jsjs$/,
+                test: /\.js$|jsx/,
                 loader: 'babel-loader',
-                exlude: '/node_modules/',
+                exclude: '/node_modules/',
                 options: {
                     presets: [
                         'react',
