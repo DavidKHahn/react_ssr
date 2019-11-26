@@ -23,14 +23,14 @@ app.get('*', (req, res) => {
     );
 
     const html=`
-    <html>
-        <head>
-        </head>
-        <body>
-            <div id="root">
-                ${content}
-        </div>
-        </body>
+        <html>
+            <head>
+            </head>
+            <body>
+                <div id="root">
+                    ${content}
+                </div>
+            </body>
         </html>
     `;
     res.send(html);
