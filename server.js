@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
+import { Helmet } from 'react-helmet';
 import { StaticRouter } from 'react-router';
 import App from './src/app';
 
@@ -22,9 +23,13 @@ app.get('*', (req, res) => {
         </StaticRouter>
     );
 
+    const helmet = Helmet.renderStatic();
+
     const html=`
         <html>
             <head>
+                ${helmet.meta.toString()}
+                ${helmet.title.toString()}
             </head>
             <body>
                 <div id="root">
