@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 class Home extends React.Component {
 
@@ -8,11 +9,11 @@ class Home extends React.Component {
 
     head(){
         return(
-            <Helment>
+            <Helmet>
                 <title>
                     React SSR RenderTown Title provided by React Helmet
                 </title>
-            </Helment>
+            </Helmet>
         )
     }
 
