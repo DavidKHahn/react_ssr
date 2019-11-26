@@ -4,14 +4,15 @@ import { Helmet } from 'react-helmet';
 class Home extends React.Component {
 
     exampleMethod() {
-        console.log('JS is running')
+        console.log('JS is now running on the client')
     }
 
     head(){
         return(
             <Helmet>
+                {/* Can insert Metatags here */}
                 <title>
-                    React SSR RenderTown Title provided by React Helmet
+                    SSR Title: Helmet
                 </title>
             </Helmet>
         )
